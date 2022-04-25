@@ -189,6 +189,20 @@
 // && (AND)
 // || (OR)
 // ! (NOT)
+// && ⇒ and operatoru. Hepsi true ise son true. false var ise ilk false döner
+// || ⇒ or operatoru  Hepsi false ise son false, ya da ilk true döner
+
+// console.log(null == false);
+// console.log(null == true);
+// console.log(null == null);
+// console.log(NaN == NaN);
 
 
 
+// NULLISH COALESCING OPERATORS
+// let d;
+// let e= "hello world"
+// console.log(d ?? e);
+// console.log(e ?? d);   // 1. değer null ve undefined se 2. değer çıkar
+// 2. değer null ve undefined ise 2. değer çıkar
+// geri kalan herşeyde 1. değer çıkar
