@@ -1,0 +1,36 @@
+.title {
+    /* display: flex; */
+    /*align-items: top;*/
+    justify-content: center;
+  }
+  h1,
+  h2 {
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+  }
+  .logo {
+    display: block;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: system-ui;
+    color: #555;
+    background-color: #F7F7F7;
+    min-height: 96vh;
+    background: linear-gradient(to top left, #5E0674, #C0CEEE);
+    display: block;
+    justify-content: center;
+  }
