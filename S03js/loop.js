@@ -128,3 +128,13 @@ console.log("*****Loops*****");
 // console.log('Girdiğiniz not', not);
 
 //? ODEV1: klavyeden Q karakteri girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
+// let not;
+// do {
+//     not = Number(prompt(`Lütfen Bir not giriniz:`));
+//     if (not == 'q' || not == 'Q') {
+//         console.log('Program Burada Bitti.....');
+//         break;
+//     }
+
+// }
+// while (not > 0 || not < 100);
