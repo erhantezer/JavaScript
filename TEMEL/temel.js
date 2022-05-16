@@ -275,7 +275,7 @@
 //     const yaş = new Date().getFullYear() - doğumTarihi ;
 //     return `Yaşım ${yaş}`;
 //     }
-//     alert(yaşYazdır(2000));
+//     console.log(yaşYazdır(2000));
 
 
 
@@ -292,7 +292,9 @@
 // return meyveSuyu;
 // };
 // console.log(meyveSuyuHazırla(2, 1, 3));
-// console.log(meyveSuyuHazırla(4, 2, 1))
+// console.log(meyveSuyuHazırla(4, 2, 1));
+
+
 
 
 
