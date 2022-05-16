@@ -50,5 +50,6 @@ console.log(rakam);
 
 cars.splice(1, 0, "vosvos");
 console.log(cars);
+
 cars.splice(2, 1, "anadol");
 console.log(cars);
