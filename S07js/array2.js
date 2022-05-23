@@ -1,22 +1,22 @@
-console.log("******** LOOPS IN ARRAYS ******");
+// console.log("******** LOOPS IN ARRAYS ******");
 
 
 
-const  islemler = [-3000, 4500, -2200, -6000, 9000];
-const islemlerToplami = () => {
-    let yatirma = 0, cekme = 0;
-    for(let i = 0; i<islemler.length; i++){
-      if(islemler[i]>=0){
-          yatirma += islemler[i]
-      }else{
-          cekme += islemler[i]
-      }
-    }
-    return `Toplam yatırma: ${yatirma}, Toplam cekme: ${-cekme}`
-};
+// const  islemler = [-3000, 4500, -2200, -6000, 9000];
+// const islemlerToplami = () => {
+//     let yatirma = 0, cekme = 0;
+//     for(let i = 0; i<islemler.length; i++){
+//       if(islemler[i]>=0){
+//           yatirma += islemler[i]
+//       }else{
+//           cekme += islemler[i]
+//       }
+//     }
+//     return `Toplam yatırma: ${yatirma}, Toplam cekme: ${-cekme}`
+// };
 
 
-console.log(islemlerToplami())
+// console.log(islemlerToplami())
 
 
 //* ======================================================
@@ -33,32 +33,32 @@ console.log(islemlerToplami())
 
 
 
-const ogrenciler = [
-    "ahmet",
-    "mehmet",
-    "ismet",
-    "saffet",
-    "ahmet",
-    "nur",
-    "can",
-    "nur",
-    "mehmet",
-    "cem",
-  ];
+// const ogrenciler = [
+//     "ahmet",
+//     "mehmet",
+//     "ismet",
+//     "saffet",
+//     "ahmet",
+//     "nur",
+//     "can",
+//     "nur",
+//     "mehmet",
+//     "cem",
+//   ];
 
-  const ogrenciBul = function (isim){
-      let sayac = 0;
-      for(let i in ogrenciler){
-        if(ogrenciler[i]===isim) {
-            sayac++;
-      }
-    };
-      if(sayac===0){
-          return`${isim}`;
-       } else{
-       return `${isim}, ${sayac} adet bulundu`;
-      }     
+//   const ogrenciBul = function (isim){
+//       let sayac = 0;
+//       for(let i in ogrenciler){
+//         if(ogrenciler[i]===isim) {
+//             sayac++;
+//       }
+//     };
+//       if(sayac===0){
+//           return`${isim}`;
+//        } else{
+//        return `${isim}, ${sayac} adet bulundu`;
+//       }     
       
-  };
-  let ogrIsim = prompt("Ad giriniz: ").toLocaleLowerCase();
-  console.log(ogrenciBul(ogrIsim));
+//   };
+//   let ogrIsim = prompt("Ad giriniz: ").toLocaleLowerCase();
+//   console.log(ogrenciBul(ogrIsim));
