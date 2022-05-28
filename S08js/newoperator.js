@@ -166,3 +166,7 @@ console.log(Array.from(str));
 console.log(Math.max(1, 3, 9, 5));
 const rakamlar = [1, 3, 9, 5];
 console.log('MAX:', Math.max(...rakamlar));
+
+console.log(Math.min(1, 3, 9, 5));
+const numbers = [1, 3, 9, 5];
+console.log('MIN:', Math.min(...numbers));

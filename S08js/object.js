@@ -28,6 +28,7 @@ console.log(this); //! Personel objesine bağlanmıştır (binded)
 
 const ahmet = new Personel(101, "Ahmet", 75000);
 const canan = new Personel(102, "Canan", 85000);
+const erhan = new Personel(103, "Erhan", 150000);
 console.log(ahmet, canan);
 console.log(canan.perMaas);
 console.log(ahmet.perAdi);
