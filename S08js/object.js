@@ -189,6 +189,11 @@ console.log(ısımler);
 
 //* Ornek6: Meslegi developer olanlarin isim ve yaslarini yeni bir Obje olarak
 //* yeni diziye saklayiniz.
+const ısımyas = kisiler.filter((k)=>k.job.toLocaleLowerCase()=="developer").map((full)=>({
+  isim:full.name,
+  yas:full.age
+}));
+console.log(ısımyas);
 
 
 //* Ornek7: kisilerin ortalama yasini hesaplayiniz.
