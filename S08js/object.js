@@ -177,8 +177,15 @@ console.log(fulisim);
 
 
 //* Ornek4: Yasi(age) 33 den kücük olan kisilerin adlarini (name) listeyiniz.
+const yas33 = kisiler.filter((yas)=>yas.age<33).map((ısım)=> ısım.name);
+console.log(yas33);
 
 //* Ornek5: 33 yasindan kücüklerin isimlerini diziye saklayiniz.
+const ısımler = kisiler.filter((yas)=>yas.age<33).map((kisi)=>({
+  names:kisi.name
+}));
+console.log(ısımler);
+
 
 //* Ornek6: Meslegi developer olanlarin isim ve yaslarini yeni bir Obje olarak
 //* yeni diziye saklayiniz.
