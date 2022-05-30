@@ -19,9 +19,9 @@ header.style.color = 'red';
 //* EXAMPLE-2 (Button Style)
 //*-------------------------------------------
 const button = document.getElementById('btn');
-btn.style.backgroundColor = 'black';
-btn.style.color = 'yellow';
-btn.style.fontSize = '2rem';
+button.style.backgroundColor = 'black';
+button.style.color = 'yellow';
+button.style.fontSize = '2rem';
 
 //*===========================================
 //*          GETELEMENTSBYTAGNAME()
@@ -58,7 +58,7 @@ console.log(myPars); //? NodeList
 myPars.forEach((p) => console.log(p.innerText));
 
 const myPars1 = document.getElementsByClassName('par');
-console.log(myPars); //? HTML Collection
+console.log(myPars1); //? HTML Collection
 
 //! HTML Collection'dan Array' e çevirme yöntemleri
 //? 1.Array.from()
