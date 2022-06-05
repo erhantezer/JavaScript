@@ -1,3 +1,5 @@
+
+
 console.log('**** Kredi Hesaplama *******');
 const select = document.querySelector('.form-select');
 const vade = document.querySelector('#vade');
@@ -30,7 +32,8 @@ hesaplaBtn.addEventListener('click', (e) => {
 });
 const sonuclariGoster = () => {
   const sonuclar = document.querySelector('.sonuclar');
-
+ 
+  //? tablo oluşturup ekranda göstermek için 
   sonuclar.innerHTML = `
   <h2 class="mt-3 text-warning">Kredi Bilgileri</h2>
   <table class="table table-bordered border-warning  mt-4">
