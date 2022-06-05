@@ -22,6 +22,7 @@ h1.style.color = 'red';
 //?container class ı içerisindeki btn class'ına ait olan elementleri arar.
 const buttons = ul.closest('.container').querySelectorAll('.btn');
 console.log(buttons);
+
 //************************************************* */
 
 ekleBtn.onclick = function () {
@@ -39,6 +40,7 @@ const javascriptKontrol = () => {
     const kucukHarf = dil.textContent.toLowerCase();
     if (kucukHarf === 'javascript') {
       // dil.className = 'red';
+
       //?Alternatif yöntem
       dil.setAttribute('class', 'red');
     }
