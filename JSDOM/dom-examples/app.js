@@ -1,4 +1,5 @@
-console.log('**** app.js *******');
+
+console.log('****** app.js *******');
 
 const dilInput = document.querySelector('.diller');
 const silBtn = document.getElementById('sil');
