@@ -68,6 +68,7 @@ const calculateProductAndCartTotal = (productInfoDiv) => {
     calculateCartTotal();
 }
 
+
 const calculateCartTotal = () => {
     let productTotalPriceDivs = document.querySelectorAll(".product-line-price");
     // console.log(productTotalPriceDivs);
@@ -75,6 +76,7 @@ const calculateCartTotal = () => {
     productTotalPriceDivs.forEach(eachProductTotalPriceDiv => {
         subtotal += parseFloat(eachProductTotalPriceDiv.innerText)
     });
+    
     console.log(subtotal);
     let taxPrice = subtotal * localStorage.getItem("taxRate");
     console.log(taxPrice);
