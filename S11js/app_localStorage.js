@@ -1,6 +1,7 @@
 //* ======================================================
 //*                     TODO APP
 //* ======================================================
+
 //? Selectors
 const btn = document.getElementById('todo-button');
 const todoInput = document.getElementById('todo-input');
@@ -64,6 +65,7 @@ todoInput.addEventListener('keydown', (e) => {
 //? delete ve ok butonları için event tanimlamasi
 todoUl.addEventListener('click', (e) => {
   const id = e.target.parentElement.getAttribute('id');
+  
   //!Event, sil butonlarının birisinden geldi ise
   if (e.target.classList.contains('fa-trash')) {
     //? Dizinin ilgili elementini sildi
@@ -76,7 +78,9 @@ todoUl.addEventListener('click', (e) => {
     e.target.parentElement.remove();
   }
 
+
   //!Event, silme veya ok butonlarından geldi ise
+
   if (e.target.classList.contains('fa-check')) {
     // todos dizisindeki ilgili elementin isDone kismini güncelle
     todos.map((todo, index) => {

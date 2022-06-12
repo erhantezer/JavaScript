@@ -113,6 +113,7 @@ li.checked > p {
   font-weight: normal;
 }
 
+/* medya sorgusu 576px kadar yazı boyutu */
 @media screen and (max-width: 576px) {
   li p {
     font-size: 0.8rem;

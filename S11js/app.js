@@ -1,6 +1,7 @@
 //* ======================================================
 //*                     TODO APP
 //* ======================================================
+
 //? Selectors
 const btn = document.getElementById('todo-button');
 const todoInput = document.getElementById('todo-input');
