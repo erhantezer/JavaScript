@@ -19,9 +19,6 @@ Project aims to create a calculator.
         |----index.js
 ```
 
-## Expected Outcome
-
-![Project 002 Snapshot](Project_002_.png)
 
 ## Objective
 
