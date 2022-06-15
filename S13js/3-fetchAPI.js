@@ -25,6 +25,7 @@ const updateDom = (data) => {
   const userDiv = document.querySelector('.users');
 
   data.forEach((user) => {
+    
     const { login, avatar_url, html_url } = user;
     userDiv.innerHTML += `
     <h2 class="text-warning">NAME:${login}</h2>
@@ -32,5 +33,5 @@ const updateDom = (data) => {
   `;
 
   });
-  
+
 };
