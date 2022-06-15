@@ -18,41 +18,39 @@
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
 
-let hata = false;
-const getUsers = async function () {
-  try {
-    const res = await fetch('https://api.github.com/users');
-    if (!res.ok) {
-      hata = true;
-      // throw new Error(`Something went wrong:${res.status}`);
-    }
-    const data = await res.json();
-    updateDom(data);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    hata = false;
-  }
+const getUser = async function (){
+  const url = 'https://api.github.com/users';
+  try{
+      const resolve = await fetch (url);
+      if (!resolve.ok){
+        throw new Error(`something went wrong: ${resolve.status}`);
+         }
+      const data = await resolve.json();
+      console.log(data);
+      updateDom(data);
+
+     }catch (error) {
+      console.log(error);
+       
+      }finally {
+        console.log("her şey yanlış");
+      }
 };
+getUser();
 
-getUsers();
+function updateDom(data){
+  const userDiv = document.querySelector(".users");
+  // userDiv.innerHTML = `<h1 class="text-danger">Data can not be fetched</h1>
+  // <img src="./img/404.png" alt="" />`;
 
-const updateDom = (data) => {
-  const userDiv = document.querySelector('.users');
+  data.forEach(user => {
+    //! DESTRUCTİRİNG
+    const {login, avatar_url,html_url} = user;
+    userDiv.innerHTML += `
+    <h2 class="text-warning mt-5 border border-4 rounded-pill">NAME:${login}</h2>
+    <img class="border rounded-pill" src=${avatar_url} width="50%" alt="developer_person" />
+    <h3 class="mt-4 bg-info border rounded-pill">HTML_URL:${html_url}</h3>
+    `
+  });
 
-  if (hata) {
-    userDiv.innerHTML = `<h1 class="text-danger">Data can not be fetched</h1>
-    <img src="./img/404.png" alt="" />
-    `;
-  } else {
-    data.forEach((user) => {
-      //!destr
-      const { login, avatar_url, html_url } = user;
-      userDiv.innerHTML += `
-    <h2 class="text-warning">NAME:${login}</h2>
-    <img src=${avatar_url} width="50%" alt="" />
-    <h3>HTML_URL:${html_url}</h3>
-  `;
-    });
-  }
-};
+}
