@@ -18,15 +18,17 @@
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
 
+let hata = false;
 const getUser = async function (){
   const url = 'https://api.github.com/users';
   try{
       const resolve = await fetch (url);
       if (!resolve.ok){
-        throw new Error(`something went wrong: ${resolve.status}`);
+        hata = true;
+        // throw new Error(`something went wrong: ${resolve.status}`);
          }
       const data = await resolve.json();
-      console.log(data);
+      // console.log(data);
       updateDom(data);
 
      }catch (error) {
@@ -40,10 +42,13 @@ getUser();
 
 function updateDom(data){
   const userDiv = document.querySelector(".users");
-  // userDiv.innerHTML = `<h1 class="text-danger">Data can not be fetched</h1>
-  // <img src="./img/404.png" alt="" />`;
 
-  data.forEach(user => {
+  if(hata){ userDiv.innerHTML = `<h1 class="text-danger">Data can not be fetched</h1>
+  <img src="./img/404.png" alt="" />`;
+}
+ 
+else{
+   data.forEach(user => {
     //! DESTRUCTİRİNG
     const {login, avatar_url,html_url} = user;
     userDiv.innerHTML += `
@@ -52,5 +57,7 @@ function updateDom(data){
     <h3 class="mt-4 bg-info border rounded-pill">HTML_URL:${html_url}</h3>
     `
   });
+}
+ 
 
 }
