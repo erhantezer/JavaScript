@@ -30,5 +30,7 @@ const updateDom = (data) => {
     <h2 class="text-warning">NAME:${login}</h2>
     <img src=${avatar_url} width="50%" alt="" />;
   `;
+
   });
+  
 };

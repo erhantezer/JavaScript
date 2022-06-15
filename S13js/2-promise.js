@@ -50,6 +50,7 @@ myPromise.then((res) => console.log(res)).catch((err) => console.log(err));
 //* 1. wait until water boiled -> kettle -> work or failed
 //* 2. add tea --> tea is avalaible or not
 //* 3. wait for brewing
+
 const wait = (ms) => {
   const start = new Date().getTime();
   while (new Date().getTime() < start + ms);
@@ -70,6 +71,7 @@ const brewTea = () => {
     })
     .catch((err) => console.log(err));
 };
+
 const boil = () => {
   return new Promise((resolve, reject) => {
     const boiled = Math.floor(Math.random() * 5);
