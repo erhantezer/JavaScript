@@ -1,4 +1,4 @@
-# Project-006 : Calculator (JS-02)
+# Project-Calculator 
 
 ## Description
 Project aims to create a calculator.
@@ -19,9 +19,6 @@ Project aims to create a calculator.
         |----index.js
 ```
 
-## Expected Outcome
-
-![Project 002 Snapshot](Project_002_.png)
 
 ## Objective
 
