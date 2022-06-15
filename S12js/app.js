@@ -83,6 +83,7 @@ const appendNumber = (num) => {
   }
   //? Girilen sayilari birlestir.
   currOperand += num;
+  
 };
 
 const updateDisplay = () => {
