@@ -7,8 +7,8 @@ const fetchCountry = async function (name) {
     try{
       const resolve = await fetch(url);
       if(!resolve.ok){
-        // renderError(`Something went wrong:${resolve.status}`)
-         throw new Error(`something went wrong: ${resolve.status}`);
+        renderError(`Something went wrong:${resolve.status}`)
+        //  throw new Error(`something went wrong: ${resolve.status}`);
       }
      const data = await resolve.json();
      renderCountry(data[0]);
@@ -20,6 +20,16 @@ const fetchCountry = async function (name) {
       console.log("herşey tamam");
     }
 };
+
+const renderError = (err) => {
+    const countriesDiv = document.querySelector('.countries');
+    countriesDiv.innerHTML = `
+       <h1 class="text-danger">${err}</h1>
+       <img src="./img/404.png" alt="" />
+      `;
+  };
+
+
 
 function renderCountry (country){
 console.log(country);
