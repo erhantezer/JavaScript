@@ -1,3 +1,4 @@
+
 // Call,Apply,Bind
 
 const obj1 = {
@@ -12,7 +13,7 @@ const obj2 = {
 
 function addNumbers(number3,number4){
         
-    console.log(this.number1 + this.number2 + number3 + number4);
+console.log(this.number1 + this.number2 + number3 + number4);
 }
 // addNumbers(100,200);
 

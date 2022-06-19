@@ -6,7 +6,7 @@
 //         console.log("Test 2");
 //     }
 // }
-// // console.log(obj);
+// console.log(obj);
 
 // const emp = Object.create(obj);
 // emp.name = "Mustafa";
@@ -36,5 +36,5 @@
 
 // console.log(emp);
 
-// // emp.test1();
+// emp.test1();
 

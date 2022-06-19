@@ -31,7 +31,6 @@ const emp = new Employee("Mustafa",25,4000);
 // console.log(emp);
 // emp.showInfos();
 // emp.toString();
-
 console.log(emp);
 
 
