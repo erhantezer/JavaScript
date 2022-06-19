@@ -7,7 +7,6 @@ Employee.prototype.showInfos = function(){
     console.log("İsim: " + this.name + " Yaş: " + this.age);
 } 
 
-
 const emp1 = new Employee("Mustafa",25);
 const emp2 = new Employee("Oğuz",25);
 
