@@ -18,6 +18,11 @@ class Book {
     }
 }
 
+//? instance
 const book1 = new Book("Gün olur asra bedel", "Cengiz Aytmatov", 1969);
+const book2 = new Book("Sinekli Bakkal", "Halide Edip Adıvar", 1910);
 console.log(book1);
 console.log(book1.getSummary());
+
+console.log(book2);
+console.log(book2.getSummary());
