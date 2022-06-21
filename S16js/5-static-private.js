@@ -42,11 +42,11 @@ class Book {
          this.#id = '123456';
     }
     getSummary() {
-        return `${this.title} was written by ${this.author} in ${this.year} so it is age ${this.#computeAge()} `;
+        return `${this._title} was written by ${this._author} in ${this._year} so it is age ${this.#computeAge()} `;
     }
     //? Stsatic method
     static compareAge(b1, b2) {
-        return `Book age diffrence: ${b1.year - b2.year}`;
+        return `Book age diffrence: ${b1._year - b2._year}`;
     }
 
     //! private id'yi okumak icin getter metodu
@@ -61,13 +61,34 @@ class Book {
 
     //! Private metot
     #computeAge() {
-        return new Date().getFullYear() - this.year;
+        return new Date().getFullYear() - this._year;
     }
 
 }
 
 //? instance
 const book1 = new Book('Kasagi', 'Omer Seyfettin', 1920);
-// const book2 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
-// const book3 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
-console.log(book1);
+const book2 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
+const book3 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
+
+//? Static
+console.log(Book.counter); //! 3
+console.log(book1.counter); //! undefined 
+console.log(Book.compareAge(book1, book3));
+
+//! PRIVATE
+
+//! private degisklenlere class disindan dogurudan erisilemez
+// console.log(book1.#id);
+// book1.#id = '4321';
+
+
+console.log(book1.getId());
+book1.setId('43210');
+console.log(book1.getId());
+
+//! Private metotlar class disraisindan cagirlamazlar.
+//! Sadece class icerisindeki metotlar taradindan  cagirlabilirler
+// console.log(book1.#computeAge());
+
+console.log(book1.getSummary());
