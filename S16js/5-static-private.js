@@ -22,3 +22,52 @@
 
 //! Private metotlara ise class disirasindan da eriselemez.
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebiler.
+
+class Book {
+    //? Static Property
+    static counter = 0;
+
+    //! Private Property
+    #id;
+
+    constructor(title, author, year) {
+        this._title = title;
+        this._author = author;
+        this._year = year;
+
+        //? Static degişken degeri bir arttırılıyor.
+        Book.counter++;
+
+         //! private prorety  deger atanmasi
+         this.#id = '123456';
+    }
+    getSummary() {
+        return `${this.title} was written by ${this.author} in ${this.year} so it is age ${this.#computeAge()} `;
+    }
+    //? Stsatic method
+    static compareAge(b1, b2) {
+        return `Book age diffrence: ${b1.year - b2.year}`;
+    }
+
+    //! private id'yi okumak icin getter metodu
+    getId() {
+        return this.#id;
+    }
+
+    //! private id'yi degisttiren setter metodu
+    setId(id) {
+        this.#id = id;
+    }
+
+    //! Private metot
+    #computeAge() {
+        return new Date().getFullYear() - this.year;
+    }
+
+}
+
+//? instance
+const book1 = new Book('Kasagi', 'Omer Seyfettin', 1920);
+// const book2 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
+// const book3 = new Book('Sinekli Bakkal', 'H.Edip Adıvar', 1910);
+console.log(book1);
